@@ -36,3 +36,14 @@ h1 {
   border: 1px solid blue;
   background-color: blueviolet;
 }
+
+.eraserbutton {
+  width: 100px;
+  height: 100px;
+}
+.buttondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}

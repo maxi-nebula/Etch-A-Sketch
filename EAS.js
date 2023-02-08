@@ -1,7 +1,8 @@
 /** @format */
 
 const container = document.getElementById("container");
-
+const resetButton = document.getElementById("eraser");
+console.log(resetButton);
 function gridCreator(rows, columns) {
   container.style.setProperty("--grid-rows", rows);
   container.style.setProperty("--grid-cols", columns);
@@ -11,11 +12,20 @@ function gridCreator(rows, columns) {
   }
 
   const hoveredGrid = document.querySelectorAll(".grid-item");
-  console.log(hoveredGrid);
+
   hoveredGrid.forEach((element) => {
     element.addEventListener("mouseenter", () => {
       element.classList.add("on_mouse_enter");
     });
   });
+
+  resetButton.addEventListener("click", () => {
+    hoveredGrid.forEach((element) => {
+      element.addEventListener("mouseenter", () => {
+        element.classList.remove("on_mouse_enter");
+      });
+    });
+  });
 }
+
 gridCreator(16, 16);
