@@ -23,6 +23,7 @@
   padding: 1em;
   border: 1px solid #ddd;
   text-align: center;
+  cursor: pointer;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
   padding: 50px;
 }
 
-on_mouse_enter {
+.on_mouse_enter {
   border: 1px solid blue;
   background-color: blueviolet;
 }
